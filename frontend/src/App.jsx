@@ -1,4 +1,5 @@
 import { useState, useMemo, useEffect } from "react";
+import { Analytics } from "@vercel/analytics/react";
 
 const HOURS = [17, 18, 19, 20, 21];
 const HOUR_LABEL = (h) => `${String(h).padStart(2, "0")}:00`;
@@ -496,6 +497,7 @@ export default function App() {
           {toast.msg}
         </div>
       )}
+      <Analytics />
     </div>
   );
 }
